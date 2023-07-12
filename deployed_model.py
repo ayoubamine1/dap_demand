@@ -42,12 +42,12 @@ st.header("Weather Conditions")
 col1, col2 = st.columns(2)
 with col1:
     st.text("Temperature")
-    temp = st.slider('kelvin', 273, 313,273+25 )
+    temp = st.slider('Celsius', -10, 50,25 )
 
 
 with col1:
     st.text("Precipitation")
-    precip = st.slider('', 10, 150,60)
+    precip = st.slider('Meters', 10, 150,60)
 
 st.header("Economic Situation")
 
@@ -89,7 +89,7 @@ model = load_model('Final model/my_model.h5')
 
 
 if st.button("Predict  DAP Demand"):
-    X_future =  np.array([float(pro),float(surf),float(temp)
+    X_future =  np.array([float(pro),float(surf),float(temp)+273.15
              ,float(precip),float(gdp),float(tai),
              float(lag_1),float(lag_2),float(lag_3),float(lag_4)])
     X_future_scaled_ = scaler_X.transform(X_future.reshape(1,-1))
