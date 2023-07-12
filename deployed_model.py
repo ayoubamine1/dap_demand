@@ -99,5 +99,5 @@ if st.button("Predict  DAP Demand"):
     y_pred_scaled_ = model.predict(X_future_reshaped_)
     y_pred_ = scaler_y.inverse_transform(y_pred_scaled_)
     
-    st.text('the quanity demanded is: '+ str(float(y_pred_))+' Tonnes')
+    st.text('The Predicted Demanded Is: '+ str(float(y_pred_))+' Tonnes')
 
