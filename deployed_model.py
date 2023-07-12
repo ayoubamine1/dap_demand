@@ -81,9 +81,9 @@ with col2:
 
 
 
-scaler_X = joblib.load('../Final model/scaler_X.save')
-scaler_y  = joblib.load('../Final model/scaler_y.save')
-model = load_model('../Final model/my_model.h5')
+scaler_X = joblib.load('Final model/scaler_X.save')
+scaler_y  = joblib.load('Final model/scaler_y.save')
+model = load_model('Final model/my_model.h5')
 
 
 
