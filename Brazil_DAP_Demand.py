@@ -258,6 +258,7 @@ def demand_wihtout_input(path):
     st.plotly_chart(fig2)
 
 def main():
+    
     st.title('Predicting Agricultural Demand for DAP in Brazil')
     col1, col2 = st.columns(2)
     with col1:
@@ -286,4 +287,11 @@ def main():
     
 
 if __name__ == "__main__":
-    main()
+    # Add a navigation sidebar to switch between pages
+    st.sidebar.title("Navigation")
+    page_options = ["Brazil DAP Demand", "India MAP Demand"]
+    selected_page = st.sidebar.selectbox("Select Page", page_options)
+    if selected_page == "India MAP Demand":
+        India_MAP_Demand.main()
+    else :
+        main()
