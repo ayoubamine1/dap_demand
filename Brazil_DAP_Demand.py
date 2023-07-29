@@ -153,7 +153,7 @@ def make_prediction(user_input):
     if len(user_input) == 1:
         data = pd.DataFrame([user_input[0]])
         xgb_error = xgb_model.predict(data)
-        lgb_error = lgb_model.predict(data)
+        lgb_error = lgb_model.predict(np.array(data))
         rf_error = rf_model.predict(data)
 
         meta_input = pd.DataFrame({
@@ -165,7 +165,7 @@ def make_prediction(user_input):
     
     else :
         data = pd.DataFrame([user_input[0]])
-        lgb_error = lgb_model.predict(data)
+        lgb_error = lgb_model.predict(np.array(data))
         rf_error = rf_model.predict(data)
         data  = pd.concat([data,pd.DataFrame([user_input[1]])],axis=1)
         xgb_error = xgb_model_with_lags.predict(data)
