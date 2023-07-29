@@ -277,9 +277,9 @@ def main():
         st.write("Predicted Demand:", prediction,'tons')
 
     st.header('Predicting Agricultural Demand for DAP in Brazil - Hybrid Approach - FAO Data ')
-    demand_wihtout_input('FuturePredictions.csv')
+    demand_wihtout_input('Brazil Future Data/FuturePredictions.csv')
     st.header('Predicting Agricultural Demand for DAP in Brazil - Hybrid Approach - Agro Climat Data')
-    demand_wihtout_input('Agro_FuturePredictions.csv')
+    demand_wihtout_input('Brazil Future Data/Agro_FuturePredictions.csv')
     
 
 if __name__ == "__main__":
