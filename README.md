@@ -1,1 +1,2 @@
-# dap_demand
+# Predicting Agricultural Demand
+The agricultural sector plays a crucial role in the global economy and is intricately linked to various factors such as production, population, weather conditions, prices, economic conditions, and government policies. In this project, our main objective is to predict the agricultural demand for Di-Ammonium Phosphate (DAP) in Brazil. By analyzing historical data and utilizing advanced modeling techniques, we aim to provide accurate predictions that can aid in decision-making and resource planning for agricultural stakeholders in Brazil. Understanding the factors influencing agricultural demand is essential for optimizing production, ensuring food security, and driving sustainable growth in the agricultural sector.
