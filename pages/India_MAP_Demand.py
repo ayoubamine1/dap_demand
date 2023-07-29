@@ -10,13 +10,13 @@ import plotly.graph_objects as go
 import plotly.express as px
 
 
-model_filename = '../Final model/xgboost_model.joblib'
-light_filename = '../Final model/lg_model.joblib'
-random_filename = '../Final model/rf_model.joblib'
-mate_model_filename = '../Final model/mate_model.joblib'
+model_filename = 'Final model/xgboost_model.joblib'
+light_filename = 'Final model/lg_model.joblib'
+random_filename = 'Final model/rf_model.joblib'
+mate_model_filename = 'Final model/mate_model.joblib'
 
-xgblags_filename = '../Final model/xgboost_model_withlags.joblib'
-mata_lags_filename = '../Final model/meta_model_lags.joblib'
+xgblags_filename = 'Final model/xgboost_model_withlags.joblib'
+mata_lags_filename = 'Final model/meta_model_lags.joblib'
 
 xgb_model = joblib.load(model_filename)
 lgb_model = joblib.load(light_filename)
