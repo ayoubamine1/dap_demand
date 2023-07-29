@@ -8,6 +8,8 @@ from sklearn.ensemble import RandomForestRegressor
 from PIL import Image
 import plotly.graph_objects as go
 import plotly.express as px
+from pages import India_MAP_Demand
+
 
 
 model_filename = 'Final model/xgboost_model.joblib'
