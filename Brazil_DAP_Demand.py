@@ -165,6 +165,7 @@ def make_prediction(user_input):
     
     else :
         data = pd.DataFrame([user_input[0]])
+        print(np.array(data))
         lgb_error = lgb_model.predict(np.array(data))
         rf_error = rf_model.predict(data)
         data  = pd.concat([data,pd.DataFrame([user_input[1]])],axis=1)
