@@ -238,8 +238,11 @@ def demand_wihtout_input(path):
         xaxis_title="Date",
         barmode='group',
         height=600, width=1000,
-        showgrid=False
     )
+    # Remove gridlines from the x-axis and y-axis
+    fig1.update_xaxes(showgrid=False)
+    fig1.update_yaxes(showgrid=False)
+
 
     # Show the first graph
     st.plotly_chart(fig1)
@@ -255,6 +258,9 @@ def demand_wihtout_input(path):
         yaxis_title="Demand",
         xaxis_title="Date",
     )
+
+   fig1.update_xaxes(showgrid=False)
+   fig1.update_yaxes(showgrid=False)
 
     # Show the second graph
     st.plotly_chart(fig2)
