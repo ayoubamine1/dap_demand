@@ -237,6 +237,8 @@ def demand_wihtout_input(path):
         yaxis_title="Demand",
         xaxis_title="Date",
         barmode='group',
+        height=600, width=1000,
+        showgrid=False
     )
 
     # Show the first graph
