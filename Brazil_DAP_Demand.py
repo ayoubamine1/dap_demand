@@ -297,7 +297,7 @@ def main():
     st.header('Predicting Agricultural Demand for DAP in Brazil - Hybrid Approach - FAO Data ')
     demand_wihtout_input('Brazil Future Data/FuturePredictions.csv')
     st.header('Predicting Agricultural Demand for DAP in Brazil - Hybrid Approach - Agro Climat Data')
-    demand_wihtout_input('https://github.com/ayoubamine1/dap_demand/blob/main/Brazil%20Future%20Data/Agro_FuturePredictions.csv')
+    demand_wihtout_input('Brazil Future Data/Agro_FuturePredictions.csv')
     
 
 if __name__ == "__main__":
