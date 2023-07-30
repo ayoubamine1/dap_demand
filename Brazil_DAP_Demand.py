@@ -202,12 +202,13 @@ def demand_wihtout_input(path):
     # Create the figure using plotly.graph_objects
     fig1 = go.Figure()
 
+     # Add the bar traces to the figure
     fig1.add_trace(go.Bar(
-        y=X_error['Prediction+Error'],
+        y=X_error['Prediction-Error'],
         x=X_error.index,
-        name='Max Demand Estimated',
-        marker_color=colors[2],  # Third color from the palette
-        text=round(X_error['Prediction+Error'], 2),
+        name='Min Demand Estimated',
+        marker_color=colors[1],  # Second color from the palette
+        text=round(X_error['Prediction-Error'], 2),
         textposition='auto'  # Add annotations to the bars
     ))
 
@@ -222,13 +223,13 @@ def demand_wihtout_input(path):
     ))
 
     
-    # Add the bar traces to the figure
+   
     fig1.add_trace(go.Bar(
-        y=X_error['Prediction-Error'],
+        y=X_error['Prediction+Error'],
         x=X_error.index,
-        name='Min Demand Estimated',
-        marker_color=colors[1],  # Second color from the palette
-        text=round(X_error['Prediction-Error'], 2),
+        name='Max Demand Estimated',
+        marker_color=colors[2],  # Third color from the palette
+        text=round(X_error['Prediction+Error'], 2),
         textposition='auto'  # Add annotations to the bars
     ))
 
