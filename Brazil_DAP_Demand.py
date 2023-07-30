@@ -298,7 +298,7 @@ def main():
     demand_wihtout_input('Brazil Future Data/FuturePredictions.csv')
     st.header('Predicting Agricultural Demand for DAP in Brazil - Hybrid Approach - Agro Climat Data')
     demand_wihtout_input('Brazil Future Data/Agro_FuturePredictions.csv')
-    print(('Brazil Future Data/Agro_FuturePredictions.csv')
+    print('Brazil Future Data/Agro_FuturePredictions.csv')
     
 
 if __name__ == "__main__":
