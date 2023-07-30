@@ -202,13 +202,12 @@ def demand_wihtout_input(path):
     # Create the figure using plotly.graph_objects
     fig1 = go.Figure()
 
-    # Add the bar traces to the figure
     fig1.add_trace(go.Bar(
-        y=X_error['Prediction-Error'],
+        y=X_error['Prediction+Error'],
         x=X_error.index,
-        name='Min Demand Estimated',
-        marker_color=colors[1],  # Second color from the palette
-        text=round(X_error['Prediction-Error'], 2),
+        name='Max Demand Estimated',
+        marker_color=colors[2],  # Third color from the palette
+        text=round(X_error['Prediction+Error'], 2),
         textposition='auto'  # Add annotations to the bars
     ))
 
@@ -222,12 +221,14 @@ def demand_wihtout_input(path):
         textposition='auto'  # Add annotations to the bars
     ))
 
+    
+    # Add the bar traces to the figure
     fig1.add_trace(go.Bar(
-        y=X_error['Prediction+Error'],
+        y=X_error['Prediction-Error'],
         x=X_error.index,
-        name='Max Demand Estimated',
-        marker_color=colors[2],  # Third color from the palette
-        text=round(X_error['Prediction+Error'], 2),
+        name='Min Demand Estimated',
+        marker_color=colors[1],  # Second color from the palette
+        text=round(X_error['Prediction-Error'], 2),
         textposition='auto'  # Add annotations to the bars
     ))
 
@@ -250,14 +251,14 @@ def demand_wihtout_input(path):
     # Assuming you have 'y' and 'model_par' defined (from your existing code)
     # Create the second graph using plotly.express
     fig2 = px.line(final_data,y ='Predicted_Demand', title="Monthly Future Demand 2020-2029",
-    color_discrete_sequence =colors)
+    color_discrete_sequence =colors[2])
     
 
     # Update layout and axes labels for the second graph
     fig2.update_layout(
         yaxis_title="Demand",
         xaxis_title="Date",
-        height=600, width=900
+        height=600, width=800
     )
 
     fig2.update_xaxes(showgrid=False)
