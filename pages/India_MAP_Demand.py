@@ -227,6 +227,8 @@ def demand_wihtout_input(path):
         text=round(X_error['Prediction+Error'], 2),
         textposition='auto'  # Add annotations to the bars
     ))
+    fig1.update_xaxes(showgrid=False)  # Remove gridlines for the x-axis
+    fig1.update_yaxes(showgrid=False)  # Remove gridlines for the y-axis
 
     # Update layout and axes labels for the first graph
     fig1.update_layout(
@@ -234,6 +236,7 @@ def demand_wihtout_input(path):
         yaxis_title="Demand",
         xaxis_title="Date",
         barmode='group',
+        height=600, width=1000
     )
 
     # Show the first graph
@@ -242,14 +245,17 @@ def demand_wihtout_input(path):
     # Assuming you have 'y' and 'model_par' defined (from your existing code)
     # Create the second graph using plotly.express
     fig2 = px.line(final_data,y ='Predicted_Demand', title="Monthly Future Demand 2020-2029",
-    color_discrete_sequence =px.colors.qualitative.Prism)
+    color_discrete_sequence =px.colors.qualitative.Pastel2)
     
 
     # Update layout and axes labels for the second graph
     fig2.update_layout(
         yaxis_title="Demand",
         xaxis_title="Date",
+        height=600, width=1000
     )
+    fig2.update_xaxes(showgrid=False)  # Remove gridlines for the x-axis
+    fig2.update_yaxes(showgrid=False)  # Remove gridlines for the y-axis
 
     # Show the second graph
     st.plotly_chart(fig2)
