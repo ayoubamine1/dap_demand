@@ -206,7 +206,8 @@ def demand_wihtout_input(path):
         name='Min Demand Estimated',
         marker_color=colors[1],  # Second color from the palette
         text=round(X_error['Prediction-Error'], 2),
-        textposition='auto'  # Add annotations to the bars
+        textposition='auto',  # Add annotations to the bars
+        showgrid=False
     ))
 
     # Add the 'Predicted Demand' bar with annotations
