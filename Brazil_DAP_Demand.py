@@ -230,6 +230,7 @@ def demand_wihtout_input(path):
         x=X_error.index,
         name='Max Demand Estimated',
         marker_color=colors[2],  # Third color from the palette
+        marker_line_color='rgba(0,0,0,0)',
         text=round(X_error['Prediction+Error'], 2),
         textposition='auto'  # Add annotations to the bars
     ))
@@ -249,11 +250,10 @@ def demand_wihtout_input(path):
 
     # Show the first graph
     st.plotly_chart(fig1)
-
     # Assuming you have 'y' and 'model_par' defined (from your existing code)
     # Create the second graph using plotly.express
     fig2 = px.line(final_data,y ='Predicted_Demand', title="Monthly Future Demand 2020-2029",
-    color_discrete_sequence =colors)
+    color_discrete_sequence = colors)
     
 
     # Update layout and axes labels for the second graph
