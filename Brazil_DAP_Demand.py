@@ -259,8 +259,8 @@ def demand_wihtout_input(path):
         xaxis_title="Date",
     )
 
-   fig1.update_xaxes(showgrid=False)
-   fig1.update_yaxes(showgrid=False)
+    fig2.update_xaxes(showgrid=False)
+    fig2.update_yaxes(showgrid=False)
 
     # Show the second graph
     st.plotly_chart(fig2)
