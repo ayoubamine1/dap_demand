@@ -188,7 +188,7 @@ def make_prediction(user_input):
     return prediction
 
 def demand_wihtout_input(path):
-    # Load your data here (replace 'FuturePredictions.csv' with your actual data file)
+     # Load your data here (replace 'FuturePredictions.csv' with your actual data file)
     final_data = pd.read_csv(path)
     final_data.index = pd.to_datetime(final_data['date'])
 
@@ -201,20 +201,20 @@ def demand_wihtout_input(path):
     X_error = X_error.groupby(X_error.index.year).sum()
 
     # Using a good color palette
-    colors = px.colors.qualitative.Pastel2
+    colors = px.colors.qualitative.D3
 
     # Create the figure using plotly.graph_objects
     fig1 = go.Figure()
 
-    # Add the bar traces to the figure
+     # Add the bar traces to the figure
     fig1.add_trace(go.Bar(
         y=X_error['Prediction-Error'],
         x=X_error.index,
         name='Min Demand Estimated',
         marker_color=colors[1],  # Second color from the palette
+        marker_line_color='rgba(0,0,0,0)',
         text=round(X_error['Prediction-Error'], 2),
-        textposition='auto',  # Add annotations to the bars
-        showgrid=False
+        textposition='auto'  # Add annotations to the bars
     ))
 
     # Add the 'Predicted Demand' bar with annotations
@@ -227,16 +227,17 @@ def demand_wihtout_input(path):
         textposition='auto'  # Add annotations to the bars
     ))
 
+    
+   
     fig1.add_trace(go.Bar(
         y=X_error['Prediction+Error'],
         x=X_error.index,
         name='Max Demand Estimated',
         marker_color=colors[2],  # Third color from the palette
+        marker_line_color='rgba(0,0,0,0)',
         text=round(X_error['Prediction+Error'], 2),
         textposition='auto'  # Add annotations to the bars
     ))
-    fig1.update_xaxes(showgrid=False)  # Remove gridlines for the x-axis
-    fig1.update_yaxes(showgrid=False)  # Remove gridlines for the y-axis
 
     # Update layout and axes labels for the first graph
     fig1.update_layout(
@@ -244,30 +245,33 @@ def demand_wihtout_input(path):
         yaxis_title="Demand",
         xaxis_title="Date",
         barmode='group',
-        height=600, width=1000
+        height=600, width=900,
     )
+    # Remove gridlines from the x-axis and y-axis
+    fig1.update_xaxes(showgrid=False)
+    fig1.update_yaxes(showgrid=False)
+
 
     # Show the first graph
     st.plotly_chart(fig1)
-
     # Assuming you have 'y' and 'model_par' defined (from your existing code)
     # Create the second graph using plotly.express
     fig2 = px.line(final_data,y ='Predicted_Demand', title="Monthly Future Demand 2020-2029",
-    color_discrete_sequence =px.colors.qualitative.Pastel2)
+    color_discrete_sequence = colors)
     
 
     # Update layout and axes labels for the second graph
     fig2.update_layout(
         yaxis_title="Demand",
         xaxis_title="Date",
-        height=600, width=1000
+        height=600, width=800
     )
-    fig2.update_xaxes(showgrid=False)  # Remove gridlines for the x-axis
-    fig2.update_yaxes(showgrid=False)  # Remove gridlines for the y-axis
+
+    fig2.update_xaxes(showgrid=False)
+    fig2.update_yaxes(showgrid=False)
 
     # Show the second graph
     st.plotly_chart(fig2)
-
 
 def main():
     st.title('Predicting Agricultural Demand for MAP in India')
