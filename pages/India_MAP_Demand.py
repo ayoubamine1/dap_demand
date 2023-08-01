@@ -122,10 +122,11 @@ def get_user_input():
         'GDP': gdp,
         'TotalAgricultureInvestment': total_agriculture_investment
     }
+    
     for i in range(12):
         variables[month_name[i]] = months_index[i]
     variables['Quarter'] = quarter
-        
+    print(variables,len(variables.keys())) 
 
     # Include lags of demand checkbox
     st.header("Imporve Model With Lags of Demand")
