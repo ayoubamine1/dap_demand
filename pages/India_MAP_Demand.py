@@ -87,7 +87,7 @@ def get_user_input():
 
     # Group 6: Total Agriculture Investment
     st.subheader("Total Agriculture Investment")
-    total_agriculture_investment = st.slider("Total Agriculture Investment (USD, lag 11)", min_value=2.648420e+04, max_value=1.555540e+05, value=1.000000e+05, step=1000)
+    total_agriculture_investment = st.slider("Total Agriculture Investment (USD, lag 11)", min_value=2.648420e+04, max_value=1.555540e+05, value=1.000000e+05, step=1000.00)
     
     # Group 5: Time-related Factors
     st.header("Time-related Factors")
