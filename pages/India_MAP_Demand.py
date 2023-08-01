@@ -159,7 +159,14 @@ def make_prediction(user_input):
     if len(user_input) == 1:
         
         data = pd.DataFrame([user_input[0]])
-        st.write(data)
+        lgb_error = lgb_model.predict(data)
+        rf_error = rf_model.predict(data)
+
+        meta_input = pd.DataFrame({
+            'LR_error': xgb_error,
+            'RF_error': lgb_error,
+        })
+        prediction = meta_model.predict(meta_input)[0]
         
         
     
