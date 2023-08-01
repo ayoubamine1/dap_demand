@@ -11,12 +11,12 @@ import plotly.express as px
 
 
 
-light_filename = 'Final model/lg_model.joblib'
-random_filename = 'Final model/rf_model.joblib'
-mate_model_filename = 'Final model/mate_model.joblib'
+light_filename = 'pages/Final model/lg_model.joblib'
+random_filename = 'pages/Final model/rf_model.joblib'
+mate_model_filename = 'pages/Final model/mate_model.joblib'
 
-xgblags_filename = 'Final model/xgboost_model_withlags.joblib'
-mata_lags_filename = 'Final model/meta_model_lags.joblib'
+xgblags_filename = 'pages/Final model/xgboost_model_withlags.joblib'
+mata_lags_filename = 'pages/Final model/meta_model_lags.joblib'
 
 
 lgb_model = joblib.load(light_filename)
