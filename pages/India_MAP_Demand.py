@@ -163,8 +163,8 @@ def make_prediction(user_input):
         rf_error = rf_model.predict(data)
 
         meta_input = pd.DataFrame({
-            'LR_error': xgb_error,
-            'RF_error': lgb_error,
+            'LR_error': lgb_error,
+            'RF_error': rf_error,
         })
         prediction = meta_model.predict(meta_input)[0]
         
@@ -178,9 +178,9 @@ def make_prediction(user_input):
         xgb_error = xgb_model_with_lags.predict(data)
 
         meta_input = pd.DataFrame({
-            'LR_error': xgb_error,
-            'RF_error': lgb_error,
-            'XGB_error': rf_error
+            'LR_error': lgb_error ,
+            'RF_error': rf_error,
+            'XGB_error': xgb_error
         })
 
         prediction = meta_model_lags.predict(meta_input)[0]
