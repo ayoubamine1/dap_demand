@@ -159,25 +159,24 @@ def make_prediction(user_input):
         rf_error = rf_model.predict(data)
 
         meta_input = pd.DataFrame({
-            'LR_error': xgb_error,
-            'RF_error': lgb_error,
-            'XGB_error': rf_error
+            'LR_error': lgb_error,
+            'RF_error': rf_error,
+            'XGB_error': xgb_error
         })
         prediction = meta_model.predict(meta_input)[0]
         prediction  = np.where(prediction<0,0,prediction)
     
     else :
         data = pd.DataFrame([user_input[0]])
-        print(np.array(data))
         lgb_error = lgb_model.predict(np.array(data))
         rf_error = rf_model.predict(data)
         data  = pd.concat([data,pd.DataFrame([user_input[1]])],axis=1)
         xgb_error = xgb_model_with_lags.predict(data)
 
         meta_input = pd.DataFrame({
-            'LR_error': xgb_error,
-            'RF_error': lgb_error,
-            'XGB_error': rf_error
+            'LR_error': lgb_error,
+            'RF_error': rf_error,
+            'XGB_error': xgb_error
         })
 
         prediction = meta_model_lags.predict(meta_input)[0]
