@@ -293,7 +293,7 @@ def main():
         prediction = make_prediction(user_input)
         st.write(prediction)
 
-        st.write("Predicted Demand:", ,'tons')
+        
 
     st.header('Predicting Agricultural Demand for DAP in Brazil - Hybrid Approach - FAO Data ')
     demand_wihtout_input('Brazil Future Data/FuturePredictions.csv')
