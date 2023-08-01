@@ -164,7 +164,7 @@ def make_prediction(user_input):
             'XGB_error': xgb_error
         })
         prediction = meta_model.predict(meta_input)[0]
-        prediction  = np.where(prediction<0,0,prediction)
+        
     
     else :
         data = pd.DataFrame([user_input[0]])
@@ -180,7 +180,7 @@ def make_prediction(user_input):
         })
 
         prediction = meta_model_lags.predict(meta_input)[0]
-        prediction  = np.where(prediction<0,0,prediction)
+        
 
     return prediction
 
@@ -291,7 +291,7 @@ def main():
     
     if st.button("Predict  DAP Demand"):
         prediction = make_prediction(user_input)
-        st.write(prediction)
+        st.write("Predicted Demand:", prediction ,'tons')
 
         
 
