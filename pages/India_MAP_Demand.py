@@ -33,55 +33,53 @@ def get_user_input():
     col1, col2 = st.columns(2)
     with col1:
         
-        barley_production = st.slider("Barley Production (tons, lag 11)", min_value=1.200000e+06, max_value=1.830000e+06, value=1.500000e+06, step=1000)
-        rice_paddy_production = st.slider("Rice Paddy Production (tons, lag 12)", min_value=1.795864e+08, max_value=2.961342e+08, value=2.500000e+08, step=1000)
-        soybeans_production = st.slider("Soybeans Production (tons, lag 6)", min_value=4.654700e+06, max_value=1.466600e+07, value=1.000000e+07, step=1000)
-        coffee_production = st.slider("Coffee Production (tons, lag 7)", min_value=1.631852e+06, max_value=3.700231e+06, value=2.500000e+06, step=1000)
+        barley_production = st.slider("Barley Production (tons, lag 11)", min_value=1200000.0, max_value=1830000.0, value=1500000.0, step=1000.0)
+        rice_paddy_production = st.slider("Rice Paddy Production (tons, lag 12)", min_value=179586400.0, max_value=296134200.0, value=250000000.0, step=1000.0)
+        soybeans_production = st.slider("Soybeans Production (tons, lag 6)", min_value=4654700.0, max_value=14666000.0, value=10000000.0, step=1000.0)
+        coffee_production = st.slider("Coffee Production (tons, lag 7)", min_value=1631852.0, max_value=3700231.0, value=2500000.0, step=1000.0)
 
     with col2:
-        seed_cotton_unginned = st.slider("Seed cotton, unginned (tons, lag 6)", min_value=1.478366e+06, max_value=7.070136e+06, value=4.500000e+06, step=1000)
-        sweet_potatoes = st.slider("Sweet Potatoes (tons, lag 12)", min_value=4.724220e+05, max_value=8.036260e+05, value=6.000000e+05, step=1000)
+        seed_cotton_unginned = st.slider("Seed cotton, unginned (tons, lag 6)", min_value=1478366.0, max_value=7070136.0, value=4500000.0, step=1000.0)
+        sweet_potatoes = st.slider("Sweet Potatoes (tons, lag 12)", min_value=472422.0, max_value=803626.0, value=600000.0, step=1000.0)
 
     # Group 2: Area Harvested
     st.subheader("Area Harvested")
     col1, col2 = st.columns(2)
     with col1:
-        barley_area_harvested = st.slider("Barley Area Harvested (hectares, lag 8)", min_value=5.756000e+05, max_value=7.928000e+05, value=7.000000e+05, step=1000)
-        rice_paddy_area_harvested = st.slider("Rice Paddy Area Harvested (hectares, lag 9)", min_value=4.117610e+07, max_value=4.553740e+07, value=4.400000e+07, step=1000)
-        sugar_area_harvested = st.slider("Sugar Area Harvested (hectares, lag 4)", min_value=7.323000e+06, max_value=1.030000e+07, value=9.000000e+06, step=1000)
+        barley_area_harvested = st.slider("Barley Area Harvested (hectares, lag 8)", min_value=575600.0, max_value=792800.0, value=700000.0, step=1000.0)
+        rice_paddy_area_harvested = st.slider("Rice Paddy Area Harvested (hectares, lag 9)", min_value=41176100.0, max_value=45537400.0, value=44000000.0, step=1000.0)
+        sugar_area_harvested = st.slider("Sugar Area Harvested (hectares, lag 4)", min_value=7323000.0, max_value=10300000.0, value=9000000.0, step=1000.0)
 
     with col2:
-        beans_area_harvested = st.slider("Beans Area Harvested (hectares, lag 9)", min_value=5.998038e+06, max_value=1.545429e+07, value=1.000000e+07, step=1000)
-        crop_land = st.slider("CropLand (hectares, lag 10)", min_value=0, max_value=1e7, value=5e6, step=1000)
+        beans_area_harvested = st.slider("Beans Area Harvested (hectares, lag 9)", min_value=5998038.0, max_value=15454290.0, value=10000000.0, step=1000.0)
+        crop_land = st.slider("CropLand (hectares, lag 10)", min_value=0, max_value=10000000, value=5000000, step=1000)
 
     # Group 3: Climate and Energy
     st.subheader("Climate and Energy")
-    col1, col2 = st.columns(2)
-    with col1:
-        temperature = st.slider("Temperature (Celsius, lag 2)", min_value=2.873971e+02, max_value=3.006677e+02, value=2.940824e+02, step=0.01)
-        
+    temperature = st.slider("Temperature (Celsius, lag 2)", min_value=287.3971, max_value=300.6677, value=294.0824, step=0.01)
+      
 
     # Group 4: Economic Factors
     st.subheader("Economic Factors")
     col1, col2 = st.columns(2)
     with col1:
-        price = st.slider("Price (USD), lag 12", min_value=1.696195e+05, max_value=0.000000e+00, value=1.000000e+05, step=1000)
-        oils_meals = st.slider("Oils & Meals (USD, lag 11)", min_value=3.679919e+01, max_value=1.409597e+02, value=5.000000e+01, step=0.01)
-        grains = st.slider("Grains (USD, lag 0)", min_value=4.212176e+01, max_value=1.566351e+02, value=7.000000e+01, step=0.01)
+        price = st.slider("Price (USD), lag 12", min_value=169619.5, max_value=0.0, value=100000.0, step=1000.0)
+        oils_meals = st.slider("Oils & Meals (USD, lag 11)", min_value=36.79919, max_value=140.9597, value=50.0, step=0.01)
+        grains = st.slider("Grains (USD, lag 0)", min_value=42.12176, max_value=156.6351, value=70.0, step=0.01)
     with col2:
-        other_food = st.slider("Other Food (USD, lag 5)", min_value=4.894163e+01, max_value=1.150557e+02, value=8.000000e+01, step=0.01)
-        fertilizers = st.slider("Fertilizers (USD, lag 2)", min_value=3.314611e+01, max_value=2.560552e+02, value=1.000000e+02, step=0.01)
-        energy = st.slider("Energy (usd, lag 4)", min_value=2.630775e+01, max_value=1.734324e+02, value=1.000000e+02, step=0.01)
+        other_food = st.slider("Other Food (USD, lag 5)", min_value=48.94163, max_value=115.0557, value=80.0, step=0.01)
+        fertilizers = st.slider("Fertilizers (USD, lag 2)", min_value=33.14611, max_value=256.0552, value=100.0, step=0.01)
+        energy = st.slider("Energy (kWh, lag 4)", min_value=26.30775, max_value=173.4324, value=100.0, step=0.01)
 
     # Group 5: Exchange Rate and GDP
-    st.subheader("Exchange Rate, GDP and Total Agriculture Investment")
+    st.subheader("Exchange Rate, GDP and Total Agriculture Investment ")
     col1, col2 = st.columns(2)
     with col1:
-        exchange_rate = st.slider("Exchange Rate (lag 5)", min_value=4.134853e+01, max_value=7.409957e+01, value=6.000000e+01, step=0.01)
-        gdp = st.slider("GDP (USD, lag 12)", min_value=3.086698e+00, max_value=8.845756e+00, value=5.000000e+00, step=0.01)
-        
+        exchange_rate = st.slider("Exchange Rate (lag 5)", min_value=41.34853, max_value=74.09957, value=60.0, step=0.01)
+         gdp = st.slider("GDP (USD, lag 12)", min_value=3.086698, max_value=8.845756, value=5.0, step=0.01)
     with col2:
-        total_agriculture_investment = st.slider("Total Agriculture Investment (USD, lag 11)", min_value=2.648420e+04, max_value=1.555540e+05, value=1.000000e+05, step=1000)
+       
+        total_agriculture_investment = st.slider("Total Agriculture Investment (USD, lag 11)", min_value=26484.2, max_value=155554.0, value=100000.0, step=1000.0)
 
     
 
