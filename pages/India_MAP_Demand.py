@@ -130,7 +130,7 @@ def get_user_input():
         "total_agriculture_investment": total_agriculture_investment
         }
     for i in range(12):
-        variables[month_name[i]] = months_index[month_name[i]]
+        variables[month_name[i]] = months_index[i]
     variables['Quarter'] = quarter
         
 
