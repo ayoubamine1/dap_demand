@@ -288,8 +288,10 @@ def main():
     
     st.header('Future Demand Prediction with Predictor Variables')
     user_input = get_user_input()
+    
     if st.button("Predict  DAP Demand"):
         prediction = make_prediction(user_input)
+        st.write(user_input)
 
         st.write("Predicted Demand:", prediction,'tons')
 
