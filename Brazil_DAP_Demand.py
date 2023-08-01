@@ -291,9 +291,9 @@ def main():
     
     if st.button("Predict  DAP Demand"):
         prediction = make_prediction(user_input)
-        st.write(user_input)
+        st.write(prediction)
 
-        st.write("Predicted Demand:", prediction,'tons')
+        st.write("Predicted Demand:", ,'tons')
 
     st.header('Predicting Agricultural Demand for DAP in Brazil - Hybrid Approach - FAO Data ')
     demand_wihtout_input('Brazil Future Data/FuturePredictions.csv')
