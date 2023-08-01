@@ -100,29 +100,28 @@ def get_user_input():
    
     # Lags of demand
     variables = {
-        "price": price,
-        "barley_production": barley_production,
-        "rice_paddy_production": rice_paddy_production,
-        "soybeans_production": soybeans_production,
-        "coffee_production": coffee_production,
-        "seed_cotton_unginned": seed_cotton_unginned,
-        "sweet_potatoes": sweet_potatoes,
-        "barley_area_harvested": barley_area_harvested,
-        "rice_paddy_area_harvested": rice_paddy_area_harvested,
-        "sugar_area_harvested": sugar_area_harvested,
-        "beans_area_harvested": beans_area_harvested,
-        "corn_area_harvested": corn_area_harvested,
-        "soybeans_area_harvested": soybeans_area_harvested,
-        "temperature": temperature,
-        "energy": energy,
-        "oils_meals": oils_meals,
-        "grains": grains,
-        "other_food": other_food,
-        "fertilizers": fertilizers,
-        "exchange_rate": exchange_rate,
-        "gdp": gdp,
-        "total_agriculture_investment": total_agriculture_investment
-        }
+        'price': price,
+        'Barley_Production': barley_production,
+        'Rice_Paddy_Production': rice_paddy_production,
+        'Soybeans_Production': soybeans_production,
+        'coffee_production': coffee_production,
+        'Seed cotton, unginned': seed_cotton_unginned,
+        'Sweet potatoes': sweet_potatoes,
+        'Barley_AreaHarvested': barley_area_harvested,
+        'Rice_Paddy_AreaHarvested': rice_paddy_area_harvested,
+        'Sugar_AreaHarvested': sugar_area_harvested,
+        'Beans_AreaHarvested': beans_area_harvested,
+        'CropLand': crop_land,
+        'temperature': temperature,
+        'Energy': energy,
+        'Oils & Meals': oils_meals,
+        'Grains': grains,
+        'Other Food': other_food,
+        'Fertilizers': fertilizers,
+        'ExchangeRate': exchange_rate,
+        'GDP': gdp,
+        'TotalAgricultureInvestment': total_agriculture_investment
+    }
     for i in range(12):
         variables[month_name[i]] = months_index[i]
     variables['Quarter'] = quarter
