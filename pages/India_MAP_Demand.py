@@ -26,7 +26,7 @@ meta_model = joblib.load(mate_model_filename)
 xgb_model_with_lags  = joblib.load(xgblags_filename)
 meta_model_lags = joblib.load(mata_lags_filename)
 def get_user_input():
-     st.write("Enter the predictor values:")
+    st.write("Enter the predictor values:")
 
     # Group 1: Agricultural Production
     st.subheader("Agricultural Production")
