@@ -76,7 +76,7 @@ def get_user_input():
     col1, col2 = st.columns(2)
     with col1:
         exchange_rate = st.slider("Exchange Rate (lag 5)", min_value=41.34853, max_value=74.09957, value=60.0, step=0.01)
-         gdp = st.slider("GDP (USD, lag 12)", min_value=3.086698, max_value=8.845756, value=5.0, step=0.01)
+        gdp = st.slider("GDP (USD, lag 12)", min_value=3.086698, max_value=8.845756, value=5.0, step=0.01)
     with col2:
        
         total_agriculture_investment = st.slider("Total Agriculture Investment (USD, lag 11)", min_value=26484.2, max_value=155554.0, value=100000.0, step=1000.0)
