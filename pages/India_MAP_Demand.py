@@ -97,7 +97,7 @@ def get_user_input():
                                              
 
     month = st.slider("Month", min_value=1, max_value=12, value=6, step=1)
-    month_index[month-1] = 1
+    months_index[month-1] = 1
 
     quarter = 0
     
@@ -132,7 +132,7 @@ def get_user_input():
             'TotalAgricultureInvestment': total_agriculture_investment,
         }
     for i in range(12):
-        variables[month_name[i]] = month_index[month_name[i]]
+        variables[month_name[i]] = months_index[month_name[i]]
     variables['Quarter'] = quarter
         
 
