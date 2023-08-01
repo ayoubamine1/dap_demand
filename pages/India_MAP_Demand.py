@@ -126,7 +126,7 @@ def get_user_input():
     for i in range(12):
         variables[month_name[i]] = months_index[i]
     variables['Quarter'] = quarter
-    print(variables,len(variables.keys())) 
+
 
     # Include lags of demand checkbox
     st.header("Imporve Model With Lags of Demand")
@@ -155,9 +155,11 @@ def get_user_input():
 
 def make_prediction(user_input):
     prediction = None
-   
+    
     if len(user_input) == 1:
+        
         data = pd.DataFrame([user_input[0]])
+        print(data)
         lgb_error = lgb_model.predict(data)
         rf_error = rf_model.predict(data)
 
