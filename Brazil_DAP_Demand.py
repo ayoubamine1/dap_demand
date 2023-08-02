@@ -66,9 +66,9 @@ def get_user_input():
     st.subheader("Climate")
     col1, col2 = st.columns(2)
     with col1:
-        temperature = st.slider("Temperature (Celsius, lag 4)", min_value=0, max_value=50, value=25, step=1)
-        precip = st.slider("Precipitation (mm, lag 3)", min_value=12, max_value=105, value=50, step=1)
+        temperature = st.slider("Temperature (Celsius, lag 4)", min_value=0, max_value=50, value=25, step=1)  
     with col2:
+        precip = st.slider("Precipitation (mm, lag 3)", min_value=12, max_value=105, value=50, step=1)
        
 
     # Group 4: Economic Factors
