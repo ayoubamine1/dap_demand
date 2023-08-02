@@ -83,7 +83,7 @@ def get_user_input():
     with col2:
         precious_metals = st.slider("Precious Metals (USD, lag 4)", min_value=float(20), max_value=float(160), value=float(50), step=0.01)
         exchange_rate = st.slider("Exchange Rate (lag 6)", min_value=float(1), max_value=float(4), value=float(2), step=0.01)
-         energy = st.slider("Energy (USD, lag 7)", min_value=16, max_value=172, value=100, step=1)
+        energy = st.slider("Energy (USD, lag 7)", min_value=16, max_value=172, value=100, step=1)
         gdp = st.slider("GDP (USD, lag 0)", min_value=float(-4), max_value=float(8), value=float(2), step=0.01)
         total_agriculture_investment = st.slider("Total Agriculture Investment (USD, lag 12)", min_value=13940, max_value=73400, value=50000, step=100)
 
