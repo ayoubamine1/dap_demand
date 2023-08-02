@@ -303,7 +303,7 @@ def main():
 
 if __name__ == "__main__":
     # Add a navigation sidebar to switch between pages
-    st.sidebar.title("Navigation")
+    st.sidebar.title("Predicting Agricultural Demand")
     page_options = ["Brazil DAP Demand", "India MAP Demand"]
     selected_page = st.sidebar.selectbox("Select Page", page_options)
     if selected_page == "India MAP Demand":
