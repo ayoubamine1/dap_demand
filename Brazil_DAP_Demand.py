@@ -63,13 +63,13 @@ def get_user_input():
         beans_area_harvested = st.slider("Beans Area Harvested (hectares, lag 3)", min_value=2587772, max_value=4332545, value=3500000, step=10000)
 
     # Group 3: Climate and Energy
-    st.subheader("Climate and Energy")
+    st.subheader("Climate")
     col1, col2 = st.columns(2)
     with col1:
         temperature = st.slider("Temperature (Celsius, lag 4)", min_value=0, max_value=50, value=25, step=1)
         precip = st.slider("Precipitation (mm, lag 3)", min_value=12, max_value=105, value=50, step=1)
     with col2:
-        energy = st.slider("Energy (kWh, lag 7)", min_value=16, max_value=172, value=100, step=1)
+       
 
     # Group 4: Economic Factors
     st.subheader("Economic Factors")
@@ -83,6 +83,7 @@ def get_user_input():
     with col2:
         precious_metals = st.slider("Precious Metals (USD, lag 4)", min_value=float(20), max_value=float(160), value=float(50), step=0.01)
         exchange_rate = st.slider("Exchange Rate (lag 6)", min_value=float(1), max_value=float(4), value=float(2), step=0.01)
+         energy = st.slider("Energy (USD, lag 7)", min_value=16, max_value=172, value=100, step=1)
         gdp = st.slider("GDP (USD, lag 0)", min_value=float(-4), max_value=float(8), value=float(2), step=0.01)
         total_agriculture_investment = st.slider("Total Agriculture Investment (USD, lag 12)", min_value=13940, max_value=73400, value=50000, step=100)
 
