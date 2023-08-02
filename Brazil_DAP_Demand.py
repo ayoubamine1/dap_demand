@@ -239,7 +239,7 @@ def demand_wihtout_input(path):
 
     # Update layout and axes labels for the first graph
     fig1.update_layout(
-        title="Future Demand 2020-2029",
+        title="Future Demand 2020-2030",
         yaxis_title="Demand",
         xaxis_title="Date",
         barmode='group',
@@ -254,7 +254,7 @@ def demand_wihtout_input(path):
     st.plotly_chart(fig1)
     # Assuming you have 'y' and 'model_par' defined (from your existing code)
     # Create the second graph using plotly.express
-    fig2 = px.line(final_data,y ='Predicted_Demand', title="Monthly Future Demand 2020-2029",
+    fig2 = px.line(final_data,y ='Predicted_Demand', title="Monthly Future Demand 2020-2030",
     color_discrete_sequence = colors)
     
 
