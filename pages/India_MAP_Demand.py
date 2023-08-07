@@ -201,7 +201,7 @@ def demand_wihtout_input(path):
     X_error = X_error.groupby(X_error.index.year).sum()
 
     # Using a good color palette
-    colors = px.colors.qualitative.D3
+    colors = ['#214E3F','#2F7F36','#69B132','#6FC02E','#9CCB27','#81C02C']
 
     # Create the figure using plotly.graph_objects
     fig1 = go.Figure()
