@@ -305,7 +305,7 @@ def main():
     button_label = '<button style="background-color: #4CAF50; color: white; border: none; padding: 10px 20px; border-radius: 8px;">Predict DAP Demand</button>'
     if st.markdown(button_label, unsafe_allow_html=True):
         prediction = make_prediction(user_input)
-        st.markdown(
+        st.write(
         f'<div style="{"; ".join(f"{key}: {value}" for key, value in prediction_style.items())}">'
         f'Predicted Demand: {prediction} tons'
         '</div>',
