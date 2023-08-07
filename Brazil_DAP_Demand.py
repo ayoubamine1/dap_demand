@@ -315,7 +315,10 @@ def main():
     
     if st.button("Predict DAP Demand", key="predict_button", style=button_style):
         prediction = make_prediction(user_input)
-       st.markdown(f'<div style="{"; ".join(f"{key}: {value}" for key, value in prediction_style.items())}">'f'Predicted Demand: {prediction} tons''</div>',
+        st.markdown(
+        f'<div style="{"; ".join(f"{key}: {value}" for key, value in prediction_style.items())}">'
+        f'Predicted Demand: {prediction} tons'
+        '</div>',
         unsafe_allow_html=True)
 
         
