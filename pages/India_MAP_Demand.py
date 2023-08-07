@@ -8,27 +8,7 @@ from sklearn.ensemble import RandomForestRegressor
 from PIL import Image
 import plotly.graph_objects as go
 import plotly.express as px
-st.markdown(
-    """
-    <style>
-    .predict-button {
-        background-color: #4CAF50;
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        margin: 4px 2px;
-        cursor: pointer;
-        border-radius: 8px;
-        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-    )
+
 
 
 light_filename = 'Final model/India Final Model/lg_model.joblib'
@@ -311,7 +291,7 @@ def main():
 
     user_input = get_user_input()
     
-    if st.button("Predict DAP Demand", key="predict_button", class="predict-button"):
+    if st.button("Predict DAP Demand"):
         prediction = make_prediction(user_input)
 
         st.write("Predicted Demand:", prediction,'tons')
