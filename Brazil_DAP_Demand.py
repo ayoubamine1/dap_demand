@@ -9,19 +9,7 @@ from PIL import Image
 import plotly.graph_objects as go
 import plotly.express as px
 from pages import India_MAP_Demand
-button_style = {
-    "background-color": "#4CAF50",
-    "color": "white",
-    "border": "none",
-    "padding": "10px 20px",
-    "text-align": "center",
-    "text-decoration": "none",
-    "font-size": "16px",
-    "margin": "4px 2px",
-    "cursor": "pointer",
-    "border-radius": "8px",
-    "box-shadow": "0px 2px 4px rgba(0, 0, 0, 0.2)"
-}
+
 prediction_style = {
         "font-size": "18px",
         "font-weight": "bold",
@@ -313,7 +301,7 @@ def main():
     st.header('Future Demand Prediction with Predictor Variables')
     user_input = get_user_input()
     
-    if st.button("Predict DAP Demand", key="predict_button", type="primary", use_container_width=True):
+    if st.button("Predict DAP Demand", type="primary", use_container_width=True):
         prediction = make_prediction(user_input)
         st.markdown(
         f'<div style="{"; ".join(f"{key}: {value}" for key, value in prediction_style.items())}">'
