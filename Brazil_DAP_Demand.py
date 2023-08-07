@@ -301,7 +301,7 @@ def main():
     st.header('Future Demand Prediction with Predictor Variables')
     user_input = get_user_input()
     
-    if st.button("Predict DAP Demand"):
+    if st.button("Predict DAP Demand", key="predict_button", type="primary"):
         prediction = make_prediction(user_input)
         st.markdown(
         f'<div style="{"; ".join(f"{key}: {value}" for key, value in prediction_style.items())}">'
