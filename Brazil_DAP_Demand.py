@@ -17,6 +17,7 @@ prediction_style = {
         "padding": "10px",
         "border": "2px solid #4CAF50",
         "border-radius": "8px",
+         "color": "#69B132",
         "background-color": "#E6F5E6",
         "box-shadow": "0px 2px 4px rgba(0, 0, 0, 0.2)"
     }
@@ -302,7 +303,7 @@ def main():
     user_input = get_user_input()
     
     # Create a button with modified color using HTML
-    if st.button('<div style="background-color: #4CAF50; color: white; border: none; padding: 10px 20px; border-radius: 8px;">Predict DAP Demand</div>'):
+    if st.button('Predict DAP Demand'):
         prediction = make_prediction(user_input)
         st.write(
         f'<div style="{"; ".join(f"{key}: {value}" for key, value in prediction_style.items())}">'
