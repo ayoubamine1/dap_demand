@@ -8,7 +8,17 @@ from sklearn.ensemble import RandomForestRegressor
 from PIL import Image
 import plotly.graph_objects as go
 import plotly.express as px
-
+prediction_style = {
+        "font-size": "18px",
+        "font-weight": "bold",
+        "margin-top": "20px",
+        "padding": "10px",
+        "border": "2px solid #4CAF50",
+        "border-radius": "8px",
+         "color": "#69B132",
+        "background-color": "#E6F5E6",
+        "box-shadow": "0px 2px 4px rgba(0, 0, 0, 0.2)"
+    }
 
 
 light_filename = 'Final model/India Final Model/lg_model.joblib'
@@ -291,10 +301,13 @@ def main():
 
     user_input = get_user_input()
     
-    if st.button("Predict DAP Demand"):
+    if st.button('Predict MAP Demand'):
         prediction = make_prediction(user_input)
-
-        st.write("Predicted Demand:", prediction,'tons')
+        st.write(
+        f'<div style="{"; ".join(f"{key}: {value}" for key, value in prediction_style.items())}">'
+        f'Predicted Demand: {round(prediction,2)} tons'
+        '</div>',
+        unsafe_allow_html=True)
 
     st.title('Predicting Agricultural Demand for DAP in Brazil - Hybrid Approach - FAO Data ')
     demand_wihtout_input('India Future Data/FuturePredictions.csv')
