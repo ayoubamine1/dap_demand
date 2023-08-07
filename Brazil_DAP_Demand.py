@@ -302,8 +302,7 @@ def main():
     user_input = get_user_input()
     
     # Create a button with modified color using HTML
-    button_label = '<button style="background-color: #4CAF50; color: white; border: none; padding: 10px 20px; border-radius: 8px;">Predict DAP Demand</button>'
-    if st.markdown(button_label, unsafe_allow_html=True):
+    if st.button('<div style="background-color: #4CAF50; color: white; border: none; padding: 10px 20px; border-radius: 8px;">Predict DAP Demand</div>'):
         prediction = make_prediction(user_input)
         st.write(
         f'<div style="{"; ".join(f"{key}: {value}" for key, value in prediction_style.items())}">'
