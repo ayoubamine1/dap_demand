@@ -17,7 +17,7 @@ prediction_style = {
         "padding": "10px",
         "border": "2px solid #4CAF50",
         "border-radius": "8px",
-         "color": "#69B132",
+         "color": "##025645",
         "background-color": "#E6F5E6",
         "box-shadow": "0px 2px 4px rgba(0, 0, 0, 0.2)"
     }
@@ -307,7 +307,7 @@ def main():
         prediction = make_prediction(user_input)
         st.write(
         f'<div style="{"; ".join(f"{key}: {value}" for key, value in prediction_style.items())}">'
-        f'Predicted Demand: {prediction} tons'
+        f'Predicted Demand: {round(prediction,2)} tons'
         '</div>',
         unsafe_allow_html=True)
 
