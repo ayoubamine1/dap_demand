@@ -301,7 +301,9 @@ def main():
     st.header('Future Demand Prediction with Predictor Variables')
     user_input = get_user_input()
     
-    if st.button("Predict DAP Demand", key="predict_button", type="primary"):
+    # Create a button with modified color using HTML
+    button_label = '<button style="background-color: #4CAF50; color: white; border: none; padding: 10px 20px; border-radius: 8px;">Predict DAP Demand</button>'
+    if st.markdown(button_label, unsafe_allow_html=True):
         prediction = make_prediction(user_input)
         st.markdown(
         f'<div style="{"; ".join(f"{key}: {value}" for key, value in prediction_style.items())}">'
