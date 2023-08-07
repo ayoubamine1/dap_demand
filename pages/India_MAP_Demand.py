@@ -15,7 +15,7 @@ prediction_style = {
         "padding": "10px",
         "border": "2px solid #4CAF50",
         "border-radius": "8px",
-         "color": "#69B132",
+         "color": "#214E3F",
         "background-color": "#E6F5E6",
         "box-shadow": "0px 2px 4px rgba(0, 0, 0, 0.2)"
     }
