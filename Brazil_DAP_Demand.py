@@ -296,7 +296,7 @@ def main():
         planning for agricultural stakeholders in Brazil. Understanding the factors influencing agricultural demand is essential \
         for optimizing production, ensuring food security, and driving sustainable growth in the agricultural sector.')
     with col2 :
-        image = Image.open('head1.jpg')
+        image = Image.open('rio-1303951_1280.jpg')
         st.image(image, caption='Technology empowering the agricultural sector')
     
     st.header('Future Demand Prediction with Predictor Variables')
