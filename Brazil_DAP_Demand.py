@@ -22,6 +22,8 @@ prediction_style = {
         "box-shadow": "0px 2px 4px rgba(0, 0, 0, 0.2)"
     }
 
+# Add OCP logo to the sidebar
+st.sidebar.markdown('<div style="text-align: center;"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/OCP_Group.svg/1200px-OCP_Group.svg.png" alt="OCP Logo" width="100"></div>', unsafe_allow_html=True)
 
 
 model_filename = 'Final model/xgboost_model.joblib'
