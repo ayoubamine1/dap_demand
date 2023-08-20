@@ -287,7 +287,7 @@ def demand_wihtout_input(path):
 
 def main():
     
-    st.title('<span style="color:#69B132">Predicting Agricultural Demand for DAP in Brazil</span>', unsafe_allow_html=True)
+    st.markdown('<h1 style="color:#69B132">Predicting Agricultural Demand for DAP in Brazil</h1>', unsafe_allow_html=True)
     col1, col2 = st.columns(2)
     with col1:
         st.markdown("Bienvenue sur la page de prédiction de la demande d'engrais agricoles au Brésil.\
