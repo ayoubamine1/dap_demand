@@ -297,8 +297,8 @@ def demand_wihtout_input(path):
 
 def main():
     
-    st.markdown('<h1 style="color:#2F7F36">Predicting Agricultural Demand</h1>', unsafe_allow_html=True)
-    st.markdown('<h2 style="color:#69B132; display: inline-block;">DAP in Brazil <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/05/Flag_of_Brazil.svg/640px-Flag_of_Brazil.svg.png" alt="Brazil Flag" width="30" style="vertical-align: middle;"> </h2>', unsafe_allow_html=True)
+    st.markdown('<h1>Predicting Agricultural Demand</h1>', unsafe_allow_html=True)
+    st.markdown('<h2 style="color:#E6B437; display: inline-block;">DAP in Brazil <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/05/Flag_of_Brazil.svg/640px-Flag_of_Brazil.svg.png" alt="Brazil Flag" width="40" style="vertical-align: middle;"> </h2>', unsafe_allow_html=True)
     col1, col2 = st.columns(2)
     with col1:
         st.markdown("Bienvenue sur la page de prédiction de la demande d'engrais agricoles au Brésil.\
