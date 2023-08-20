@@ -293,11 +293,10 @@ def main():
         prédiction de la demande de DAP (Diammonium Phosphate) dans le secteur agricole  \
        brésilien. Notre objectif est de vous fournir une perspective claire et approfondie sur les \
        tendances de la demande d'engrais, vous permettant ainsi de mieux comprendre les fluctuations saisonnières \
-       et les facteurs qui influencent cette demande cruciale.\n
-       Naviguez à travers les différentes sections de ce tableau de bord pour explorer les résultats de nos analyses, \
-       les performances de nos modèles et les prévisions futures de la demande de DAP. Nous vous invitons à découvrir \
-       l'intersection entre la science des données, l'agriculture et la durabilité, tout en jetant un coup d'œil vers \
-       l'avenir de la prédiction de la demande agricole au Brésil.")
+       et les facteurs qui influencent cette demande cruciale.\n Naviguez à travers les différentes sections de ce \
+       tableau de bord pour explorer les résultats de nos analyses,les performances de nos modèles et les prévisions \
+       futures de la demande de DAP. Nous vous invitons à découvrir l'intersection entre la science des données, l'agriculture \
+       et la durabilité, tout en jetant un coup d'œil vers l'avenir de la prédiction de la demande agricole au Brésil.")
     with col2 :
         image = Image.open('rio-1303951_1280.jpg')
         st.image(image, caption='Technology empowering the agricultural sector')
