@@ -284,7 +284,8 @@ def demand_wihtout_input(path):
     st.plotly_chart(fig2)
 
 def main():
-    st.title('Predicting Agricultural Demand for MAP in India')
+    st.markdown('<h1 >Predicting Agricultural Demand</h1>', unsafe_allow_html=True)
+    st.markdown('<h2 style="color:#E6B437">MAP in India</h2>', unsafe_allow_html=True)
     col1, col2 = st.columns(2)
     with col1:
         st.markdown("Bienvenue sur la page de prédiction de la demande d'engrais agricoles en Inde.\
