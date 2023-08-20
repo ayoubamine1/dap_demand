@@ -21,6 +21,16 @@ prediction_style = {
         "background-color": "#E6F5E6",
         "box-shadow": "0px 2px 4px rgba(0, 0, 0, 0.2)"
     }
+st.markdown(
+    """
+    <style>
+    .st-dd[role="slider"] .deAiiE {
+        background-color: #6FC02E; 
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 # Add OCP logo to the sidebar
 st.sidebar.markdown('<div style="text-align: center;"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/OCP_Group.svg/1200px-OCP_Group.svg.png" alt="OCP Logo" width="100"></div>', unsafe_allow_html=True)
