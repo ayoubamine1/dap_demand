@@ -36,7 +36,7 @@ meta_model = joblib.load(mate_model_filename)
 xgb_model_with_lags  = joblib.load(xgblags_filename)
 meta_model_lags = joblib.load(mata_lags_filename)
 def get_user_input():
-    st.write("Enter the predictor values:")
+    st.subheader("Enter the predictor values:")
 
     # Group 1: Agricultural Production
     st.subheader("Agricultural Production")
@@ -46,11 +46,12 @@ def get_user_input():
         barley_production = st.slider("Barley Production (tons, lag 11)", min_value=1200000.0, max_value=1830000.0, value=1500000.0, step=1000.0)
         rice_paddy_production = st.slider("Rice Paddy Production (tons, lag 12)", min_value=179586400.0, max_value=296134200.0, value=250000000.0, step=1000.0)
         soybeans_production = st.slider("Soybeans Production (tons, lag 6)", min_value=4654700.0, max_value=14666000.0, value=10000000.0, step=1000.0)
-        coffee_production = st.slider("Coffee Production (tons, lag 7)", min_value=1631852.0, max_value=3700231.0, value=2500000.0, step=1000.0)
+       
 
     with col2:
         seed_cotton_unginned = st.slider("Seed cotton, unginned (tons, lag 6)", min_value=1478366.0, max_value=7070136.0, value=4500000.0, step=1000.0)
         sweet_potatoes = st.slider("Sweet Potatoes (tons, lag 12)", min_value=472422.0, max_value=803626.0, value=600000.0, step=1000.0)
+        coffee_production = st.slider("Coffee Production (tons, lag 7)", min_value=1631852.0, max_value=3700231.0, value=2500000.0, step=1000.0)
 
     # Group 2: Area Harvested
     st.subheader("Area Harvested")
@@ -139,7 +140,7 @@ def get_user_input():
 
 
     # Include lags of demand checkbox
-    st.header("Imporve Model With Lags of Demand")
+    st.header("Improve Model Performance With Demand Lags")
     include_lags = st.checkbox("Include Lags of Demand", value=False)
     lag_2 = lag_5 = lag_8 = lag_9 = lag_10 =  0
     lags  = {'lag_2': lag_2,
