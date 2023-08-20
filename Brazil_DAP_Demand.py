@@ -56,14 +56,14 @@ def get_user_input():
         barley_production = st.slider("Barley Production (tons, lag 7)", min_value=186285, max_value=405615, value=300000, step=1000)
         rice_paddy_production = st.slider("Rice Paddy Production (tons, lag 0)", min_value=16977040, max_value=22466150, value=20000000, step=100000)
         wheat_production = st.slider("Wheat Production (tons, lag 10)", min_value=1725792, max_value=6834421, value=4000000, step=10000)
-        beans_production = st.slider("Beans Production (tons, lag 5)", min_value=2191153, max_value=3486763, value=3000000, step=10000)
+        
 
     # Column 2: Coffee and Seed Cotton Production
     with col2:
         coffee_production = st.slider("Coffee Production (tons, lag 2)", min_value=1631852, max_value=3700231, value=2000000, step=10000)
         seed_cotton_unginned = st.slider("Seed cotton, unginned (tons, lag 8)", min_value=1172992, max_value=6893340, value=4000000, step=10000)
         sweet_potatoes = st.slider("Sweet Potatoes (tons, lag 5)", min_value=444925, max_value=803626, value=600000, step=10000)
-       
+        beans_production = st.slider("Beans Production (tons, lag 5)", min_value=2191153, max_value=3486763, value=3000000, step=10000)
 
     # Group 2: Area Harvested
     st.subheader("Area Harvested")
@@ -93,13 +93,13 @@ def get_user_input():
         beverages = st.slider("Beverages (USD, lag 2)", min_value=float(30), max_value=float(150), value=float(50), step=0.01)
         oils_meals = st.slider("Oils & Meals (USD, lag 6)", min_value=float(30), max_value=float(150), value=float(50), step=0.01)
         fertilizers = st.slider("Fertilizers (USD, lag 8)", min_value=float(30), max_value=float(260), value=float(50), step=0.01)
-       
+        total_agriculture_investment = st.slider("Total Agriculture Investment (USD, lag 12)", min_value=13940, max_value=73400, value=50000, step=100)
     with col2:
         precious_metals = st.slider("Precious Metals (USD, lag 4)", min_value=float(20), max_value=float(160), value=float(50), step=0.01)
         exchange_rate = st.slider("Exchange Rate (lag 6)", min_value=float(1), max_value=float(4), value=float(2), step=0.01)
         energy = st.slider("Energy (USD, lag 7)", min_value=16, max_value=172, value=100, step=1)
         gdp = st.slider("GDP (USD, lag 0)", min_value=float(-4), max_value=float(8), value=float(2), step=0.01)
-        total_agriculture_investment = st.slider("Total Agriculture Investment (USD, lag 12)", min_value=13940, max_value=73400, value=50000, step=100)
+        
 
     # Group 5: Time-related Factors
     st.subheader("Time-related Factors")
@@ -146,7 +146,7 @@ def get_user_input():
         }
 
     # Include lags of demand checkbox
-    st.subheader("Imporve Model With Lags of Demand")
+    st.subheader("Improve Model Performance With Demand Lags")
     include_lags = st.checkbox("Include Lags of Demand", value=False)
     lag_5 = lag_3 = lag_12 = 0
     lags  = {'lag_5': lag_5,
@@ -288,7 +288,7 @@ def demand_wihtout_input(path):
 def main():
     
     st.markdown('<h1 >Predicting Agricultural Demand</h1>', unsafe_allow_html=True)
-    st.markdown('<h2 style="color:#69B132">DAP in Brazil</h2>', unsafe_allow_html=True)
+    st.markdown('<h2 style="color:#E6B437">DAP in Brazil</h2>', unsafe_allow_html=True)
     col1, col2 = st.columns(2)
     with col1:
         st.markdown("Bienvenue sur la page de prédiction de la demande d'engrais agricoles au Brésil.\
