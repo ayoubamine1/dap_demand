@@ -269,7 +269,7 @@ def demand_wihtout_input(path):
     # Assuming you have 'y' and 'model_par' defined (from your existing code)
     # Create the second graph using plotly.express
     fig2 = px.line(final_data,y ='Predicted_Demand', title="Monthly Future Demand 2020-2030",
-    color_discrete_sequence = colors)
+    color_discrete_sequence = colors[1:])
     
 
     # Update layout and axes labels for the second graph
@@ -287,7 +287,7 @@ def demand_wihtout_input(path):
 
 def main():
     
-    st.title('Predicting Agricultural Demand for DAP in Brazil')
+    st.title('<span style="color:#69B132">Predicting Agricultural Demand for DAP in Brazil</span>', unsafe_allow_html=True)
     col1, col2 = st.columns(2)
     with col1:
         st.markdown("Bienvenue sur la page de prédiction de la demande d'engrais agricoles au Brésil.\
@@ -303,7 +303,7 @@ def main():
         image = Image.open('brazil.jpg')
         st.image(image, caption='Technology empowering the agricultural sector')
     
-    st.header('Future Demand Prediction with Predictor Variables')
+    st.header('Forecasting Future Demand Using Influencing Factors ')
     user_input = get_user_input()
     
     # Create a button with modified color using HTML
