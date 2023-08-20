@@ -62,7 +62,7 @@ def get_user_input():
 
     # Column 1: Sugar and Barley Production
     with col1:
-        sugar = st.slider("Sugar Production (tons, lag 10)", min_value=16197710, max_value=38734080, value=30000000, step=100000)
+        sugar = st.slider("Sugar Production (tons, lag 10)", min_value=16197710, max_value=38734080, value=30000000, step=100000,style="background-color: #6FC02E; color: white;")
         barley_production = st.slider("Barley Production (tons, lag 7)", min_value=186285, max_value=405615, value=300000, step=1000)
         rice_paddy_production = st.slider("Rice Paddy Production (tons, lag 0)", min_value=16977040, max_value=22466150, value=20000000, step=100000)
         wheat_production = st.slider("Wheat Production (tons, lag 10)", min_value=1725792, max_value=6834421, value=4000000, step=10000)
