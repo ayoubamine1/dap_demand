@@ -298,7 +298,7 @@ def main():
        futures de la demande de DAP. Nous vous invitons à découvrir l'intersection entre la science des données, l'agriculture \
        et la durabilité, tout en jetant un coup d'œil vers l'avenir de la prédiction de la demande agricole au Brésil.")
     with col2 :
-        image = Image.open('rio-1303951_1280.jpg')
+        image = Image.open('brazil.png')
         st.image(image, caption='Technology empowering the agricultural sector')
     
     st.header('Future Demand Prediction with Predictor Variables')
