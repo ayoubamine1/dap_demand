@@ -284,7 +284,7 @@ def demand_wihtout_input(path):
     st.plotly_chart(fig2)
 
 def main():
-    st.markdown('<h1 >Predicting Agricultural Demand</h1>', unsafe_allow_html=True)
+    st.markdown('<h1 >Predicting Agricultural Demand <img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/1200px-Flag_of_India.svg.png" alt="Brazil Flag" width="40" style="vertical-align: middle;"></h1>', unsafe_allow_html=True)
     st.markdown('<h2 style="color:#E6B437">MAP in India</h2>', unsafe_allow_html=True)
     col1, col2 = st.columns(2)
     with col1:
