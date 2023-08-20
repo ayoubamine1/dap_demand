@@ -288,13 +288,16 @@ def main():
     st.title('Predicting Agricultural Demand for DAP in Brazil')
     col1, col2 = st.columns(2)
     with col1:
-        st.markdown('The agricultural sector plays a crucial role in the global economy and is intricately \
-        linked to various factors such as production, population, weather conditions,\
-        prices, economic conditions, and government policies. In this project, our main objective is to predict \
-        the agricultural demand for Di-Ammonium Phosphate (DAP) in Brazil. By analyzing historical data and utilizing \
-        advanced modeling techniques, we aim to provide accurate predictions that can aid in decision-making and resource \
-        planning for agricultural stakeholders in Brazil. Understanding the factors influencing agricultural demand is essential \
-        for optimizing production, ensuring food security, and driving sustainable growth in the agricultural sector.')
+        st.markdown("Bienvenue sur la page de prédiction de la demande d'engrais agricoles au Brésil.\
+        Dans ce tableau de bord interactif, nous vous offrons la possibilité de plonger dans le monde de la \
+        prédiction de la demande de DAP (Diammonium Phosphate) dans le secteur agricole  \
+       brésilien. Notre objectif est de vous fournir une perspective claire et approfondie sur les \
+       tendances de la demande d'engrais, vous permettant ainsi de mieux comprendre les fluctuations saisonnières \
+       et les facteurs qui influencent cette demande cruciale.\
+       Naviguez à travers les différentes sections de ce tableau de bord pour explorer les résultats de nos analyses, \
+       les performances de nos modèles et les prévisions futures de la demande de DAP. Nous vous invitons à découvrir \
+       l'intersection entre la science des données, l'agriculture et la durabilité, tout en jetant un coup d'œil vers \
+       l'avenir de la prédiction de la demande agricole au Brésil.")
     with col2 :
         image = Image.open('rio-1303951_1280.jpg')
         st.image(image, caption='Technology empowering the agricultural sector')
