@@ -52,7 +52,7 @@ meta_model = joblib.load(mate_model_filename)
 xgb_model_with_lags  = joblib.load(xgblags_filename)
 meta_model_lags = joblib.load(mata_lags_filename)
 def get_user_input():
-    st.write("Enter the predictor values:")
+    st.subheader("Enter the predictor values:")
 
     # Group 1: Agricultural Production and Area Harvested
     st.subheader("Agricultural Production and Area Harvested")
@@ -297,8 +297,8 @@ def demand_wihtout_input(path):
 
 def main():
     
-    st.markdown('<h1 >Predicting Agricultural Demand</h1>', unsafe_allow_html=True)
-    st.markdown('<h2 style="color:#E6B437">DAP in Brazil</h2>', unsafe_allow_html=True)
+    st.markdown('<h1 style="color:#2F7F36">Predicting Agricultural Demand</h1>', unsafe_allow_html=True)
+    st.markdown('<h2 style="color:#69B132">DAP in Brazil</h2>', unsafe_allow_html=True)
     col1, col2 = st.columns(2)
     with col1:
         st.markdown("Bienvenue sur la page de prédiction de la demande d'engrais agricoles au Brésil.\
